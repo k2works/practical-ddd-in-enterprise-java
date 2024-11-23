@@ -1,0 +1,3 @@
+# com.practicalddd.cargotracker.routing.domain.model.valueobjects <-> com.practicalddd.cargotracker.routing.domain.model.entities
+- com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement -> com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location
+- com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule -> com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement

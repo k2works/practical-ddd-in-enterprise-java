@@ -1,0 +1,237 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico">
+    <title>区分概要</title>
+</head>
+<body>
+<header class="top">
+    <a href="./index.html">[INDEX]</a>
+    <b>区分概要</b>
+</header>
+<div class="sideNavMain">
+    <nav class="tree">
+        <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker">cargotracker</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking">booking</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model">model</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></div>
+        </details>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling">handling</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling.domain.model">model</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></div>
+        </details>
+        </details>
+        </details>
+        
+    </nav>
+
+    <main>
+        <section class="type">
+            <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></h2>
+            <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus</div>
+
+            
+                
+            
+
+            <table class="fields">
+                <thead>
+                <tr>
+                    <th>列挙定数名</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">NOT_ROUTED</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">ROUTED</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">MISROUTED</td>
+                    
+                </tr>
+            </table>
+
+            
+
+            
+            
+        
+            
+            
+        
+        </section>
+        <section class="type">
+            <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></h2>
+            <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus</div>
+
+            
+                
+            
+
+            <table class="fields">
+                <thead>
+                <tr>
+                    <th>列挙定数名</th>
+                    
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">NOT_RECEIVED</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">IN_PORT</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">ONBOARD_CARRIER</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">CLAIMED</td>
+                    
+                </tr>
+                <tr>
+                    <td class="method-name">UNKNOWN</td>
+                    
+                </tr>
+            </table>
+
+            
+
+            
+            
+        
+            
+            
+        
+        </section>
+        <section class="type">
+            <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></h2>
+            <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type</div>
+
+            
+                <section class="markdown javadoc">association, it's never optional.</section>
+            
+
+            <table class="fields">
+                <thead>
+                <tr>
+                    <th>列挙定数名</th>
+                    <th>voyageRequired</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">LOAD</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td class="method-name">UNLOAD</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td class="method-name">RECEIVE</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td class="method-name">CLAIM</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td class="method-name">CUSTOMS</td>
+                    <td>false</td>
+                </tr>
+            </table>
+
+            <table>
+                <thead class="enum">
+                <tr>
+                    <th width="20%">フィールド</th>
+                    <th>フィールド型</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>voyageRequired</td>
+                    <td>
+                        <span class="weak">boolean</span>
+                        
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ prohibitsVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ requiresVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ sameValueAs</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a>
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+            
+            
+        
+        </section>
+    </main>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@5.1.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js"></script>
+    <script src="./assets/jig.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,3889 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico">
+    <title>ドメイン概要</title>
+</head>
+<body>
+<header class="top">
+    <a href="./index.html">[INDEX]</a>
+    <b>ドメイン概要</b>
+</header>
+<div class="sideNavMain">
+    <nav class="tree">
+        <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker">cargotracker</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.routing">routing</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.routing.domain.model">model</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects">valueobjects</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></div><div><a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule">A Voyage schedule</a></div><div><a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.routing.domain.model.aggregates">aggregates</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.routing.domain.model.aggregates.Voyage">Voyage</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.routing.domain.model.entities">entities</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement">CarrierMovement</a></div>
+        </details>
+        </details>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking">tracking</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking.domain.model">model</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking.domain.model.entities">entities</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent">TrackingActivityEvent</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId">Aggregate Identifier for the Cargo Aggregate</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking.domain.model.commands">commands</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand">Add Tracking Event Command</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand">Assign Tracking Number Command class</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects">valueobjects</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent">Tracking Event Details</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType">TrackingEventType</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber">TrackingVoyageNumber</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates">aggregates</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity">TrackingActivity</a></div><div><a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber">TrackingNumber</a></div>
+        </details>
+        </details>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling">handling</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling.domain.model">model</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling.domain.model.commands">commands</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand">Command to Register an Handling Activity</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling.domain.model.aggregates">aggregates</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects">valueobjects</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId">CargoBookingId</a></div><div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory">HandlingActivityHistory</a></div><div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></div><div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></div><div><a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></div>
+        </details>
+        </details>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking">booking</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model">model</a>
+            </summary>
+            <details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model.commands">commands</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand">Book Cargo Command class</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand">Command Class to assign a route to a booked cargo</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model.entities">entities</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects">valueobjects</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity">A handling activity represents how and where a cargo can be handled, and can</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg">Leg</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></div>
+        </details><details open>
+            <summary class="package">
+                <a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates">aggregates</a>
+            </summary>
+            <div><a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId">Aggregate Identifier for the Cargo Aggregate</a></div><div><a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo">Cargo</a></div>
+        </details>
+        </details>
+        </details>
+        </details>
+        
+    </nav>
+    <main>
+        
+            <section class="package">
+        <h2><a name="com">com</a></h2>
+        <small class="fully-qualified-name">com</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd">practicalddd</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd">practicalddd</a></h2>
+        <small class="fully-qualified-name">com.practicalddd</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker">cargotracker</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker">cargotracker</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing">routing</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking">tracking</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling">handling</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking">booking</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking">booking</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain">domain</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain">domain</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model">model</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model">model</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.commands">commands</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.entities">entities</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects">valueobjects</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates">aggregates</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.aggregates">aggregates</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.aggregates</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId">Aggregate Identifier for the Cargo Aggregate</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo">Cargo</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.commands">commands</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.commands</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand">Book Cargo Command class</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand">Command Class to assign a route to a booked cargo</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.entities">entities</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.entities</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects">valueobjects</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity">A handling activity represents how and where a cargo can be handled, and can</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg">Leg</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling">handling</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling.domain">domain</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain">domain</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model">model</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model">model</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.commands">commands</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.aggregates">aggregates</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects">valueobjects</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.aggregates">aggregates</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.aggregates</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.commands">commands</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.commands</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand">Command to Register an Handling Activity</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects">valueobjects</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId">CargoBookingId</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory">HandlingActivityHistory</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber">VoyageNumber</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing">routing</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing.domain">domain</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain">domain</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model">model</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model">model</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects">valueobjects</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.aggregates">aggregates</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.entities">entities</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.aggregates">aggregates</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.aggregates</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.aggregates.Voyage">Voyage</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.entities">entities</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.entities</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement">CarrierMovement</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.valueobjects">valueobjects</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.valueobjects</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule">A Voyage schedule</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber">VoyageNumber</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking">tracking</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain">domain</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain">domain</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model">model</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model">model</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.entities">entities</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.commands">commands</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects">valueobjects</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates">aggregates</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.aggregates">aggregates</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.aggregates</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity">TrackingActivity</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber">TrackingNumber</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.commands">commands</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.commands</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand">Add Tracking Event Command</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand">Assign Tracking Number Command class</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.entities">entities</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.entities</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent">TrackingActivityEvent</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId">Aggregate Identifier for the Cargo Aggregate</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+            <section class="package">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.valueobjects">valueobjects</a></h2>
+        <small class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.valueobjects</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent">Tracking Event Details</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType">TrackingEventType</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber">TrackingVoyageNumber</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+        
+
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId">Aggregate Identifier for the Cargo Aggregate</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo">Cargo</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>bookingId</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId">Aggregate Identifier for the Cargo Aggregate</a></td>
+            </tr>
+            <tr>
+                <td>bookingAmount</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a></td>
+            </tr>
+            <tr>
+                <td>origin</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>routeSpecification</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a></td>
+            </tr>
+            <tr>
+                <td>itinerary</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a></td>
+            </tr>
+            <tr>
+                <td>delivery</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ Assigns Route to the Cargo</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getBookingAmount</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId">Aggregate Identifier for the Cargo Aggregate</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getItinerary</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getOrigin</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getRouteSpecification</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingAmount</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setItinerary</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setOrigin</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand">Book Cargo Command class</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>bookingAmount</td>
+                <td><span class="weak">int</span></td>
+            </tr>
+            <tr>
+                <td>originLocation</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>destLocation</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>destArrivalDeadline</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingAmount</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">int</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDestArrivalDeadline</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDestLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getOriginLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingAmount</td>
+                    <td>
+                        <a class="method-argument-item" href="#int">int</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setDestArrivalDeadline</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.util.Date">Date</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setDestLocation</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setOriginLocation</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand">Command Class to assign a route to a booked cargo</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>cargoBookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getCargoBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setCargoBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.entities.Location</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>unLocCode</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getUnLocCode</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setUnLocCode</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount">Domain model representation of the Booking Amount for a new Cargo.</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount</div>
+
+        
+            <section class="markdown javadoc">Contains the Booking Amount of the Cargo</section>
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingAmount</td>
+                <td><span class="weak">Integer</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingAmount</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Integer</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingAmount</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.Integer">Integer</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity">A handling activity represents how and where a cargo can be handled, and can</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity</div>
+
+        
+            <section class="markdown javadoc">be used to express predictions about what is expected to happen to a cargo in
+the future.</section>
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>type</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>voyage</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getType</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>legs</td>
+                <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg">Leg</a>&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getLegs</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg">Leg</a>&gt;</td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>routingStatus</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></td>
+            </tr>
+            <tr>
+                <td>transportStatus</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></td>
+            </tr>
+            <tr>
+                <td>lastKnownLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>currentVoyage</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></td>
+            </tr>
+            <tr>
+                <td>lastEvent</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a></td>
+            </tr>
+            <tr>
+                <td>nextExpectedActivity</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity">A handling activity represents how and where a cargo can be handled, and can</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getCurrentVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getLastKnownLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getRoutingStatus</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTransportStatus</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setLastEvent</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setLastKnownLocation</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ Creates a new delivery snapshot to reflect changes in routing, i.e. when</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a><a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a>
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a></td>
+                    <td class="markdown javadoc">the route specification or the itinerary has changed but no additional
+handling of the cargo has been performed.</td>
+                </tr>
+                <tr>
+                    <td class="method-name">- Calculate Last known location</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">- Method to calculate the Routing status of a Cargo</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a><a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a>
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">- Method to calculate the Transposrt Status of a Cargo</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">staticメソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ derivedFrom</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary">CargoItinerary</a><a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a><a class="method-argument-item" href="#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a>
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery">Delivery</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent">LastCargoHandledEvent</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>handlingEventId</td>
+                <td><span class="weak">Integer</span></td>
+            </tr>
+            <tr>
+                <td>handlingEventType</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>handlingEventVoyage</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>handlingEventLocation</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getHandlingEventId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Integer</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getHandlingEventLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getHandlingEventType</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getHandlingEventVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setHandlingEventId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.Integer">Integer</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setHandlingEventLocation</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setHandlingEventType</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setHandlingEventVoyage</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg">Leg</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>voyage</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></td>
+            </tr>
+            <tr>
+                <td>loadLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>unloadLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>loadTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>unloadTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification">RouteSpecification</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>origin</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>destination</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>arrivalDeadline</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getArrivalDeadline</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDestination</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getOrigin</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.booking.domain.model.entities.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">RoutingStatus</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値 (<a href="./enum.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus">区分概要</a>)</h3>
+            <ul>
+                <li>NOT_ROUTED</li>
+                <li>ROUTED</li>
+                <li>MISROUTED</li>
+            </ul>
+        </section>
+
+        
+
+        
+            
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">TransportStatus</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値 (<a href="./enum.html#com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus">区分概要</a>)</h3>
+            <ul>
+                <li>NOT_RECEIVED</li>
+                <li>IN_PORT</li>
+                <li>ONBOARD_CARRIER</li>
+                <li>CLAIMED</li>
+                <li>UNKNOWN</li>
+            </ul>
+        </section>
+
+        
+
+        
+            
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage"> Class representing the Cargo Voyage</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getVoyageId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></td>
+            </tr>
+            <tr>
+                <td>voyageNumber</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>completionTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>cargoBookingId</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId">CargoBookingId</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getCargoBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId">CargoBookingId</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getCompletionTime</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getType</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand">Command to Register an Handling Activity</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>completionTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>unLocode</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>handlingType</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getCompletionTime</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getHandlingType</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getUnLocode</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setCompletionTime</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.util.Date">Date</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setHandlingType</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setUnLocode</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId">CargoBookingId</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory">HandlingActivityHistory</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>handlingEvents</td>
+                <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a>&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getAllHandlingEvents</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a>&gt;</td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDistinctEventsByCompletionTime</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a>&gt;</td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getMostRecentlyCompletedEvent</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity">Root Aggregate for the Handling Bounded Context</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>unLocCode</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getUnLocCode</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setUnLocCode</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type</div>
+
+        
+            <section class="markdown javadoc">association, it's never optional.</section>
+        
+
+        <section>
+            <h3>列挙値 (<a href="./enum.html#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">区分概要</a>)</h3>
+            <ul>
+                <li>LOAD</li>
+                <li>UNLOAD</li>
+                <li>RECEIVE</li>
+                <li>CLAIM</li>
+                <li>CUSTOMS</li>
+            </ul>
+        </section>
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>voyageRequired</td>
+                <td><span class="weak">boolean</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ prohibitsVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ requiresVoyage</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ sameValueAs</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type">Handling event type. Either requires or prohibits a carrier movement</a>
+                    </td>
+                    <td><span class="weak">boolean</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.aggregates.Voyage">Voyage</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.aggregates.Voyage</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>schedule</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule">A Voyage schedule</a></td>
+            </tr>
+            <tr>
+                <td>voyageNumber</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getSchedule</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule">A Voyage schedule</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement">CarrierMovement</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>arrivalDate</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>departureDate</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>arrivalLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            <tr>
+                <td>departureLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getArrivalDate</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getArrivalLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDepartureDate</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getDepartureLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location">Location class represented by a unique 5-diigit UN Location code.</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>unLocCode</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getUnLocCode</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setUnLocCode</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule">A Voyage schedule</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>carrierMovements</td>
+                <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement">CarrierMovement</a>&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getCarrierMovements</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement">CarrierMovement</a>&gt;</td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber">VoyageNumber</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity">TrackingActivity</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>trackingNumber</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber">TrackingNumber</a></td>
+            </tr>
+            <tr>
+                <td>bookingId</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId">Aggregate Identifier for the Cargo Aggregate</a></td>
+            </tr>
+            <tr>
+                <td>trackingActivityEvent</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent">TrackingActivityEvent</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ Add a tracking event to the Tracking Details</td>
+                    <td>
+                        <a class="method-argument-item" href="#com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand">Add Tracking Event Command</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId">Aggregate Identifier for the Cargo Aggregate</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTrackingActivityEvents</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent">TrackingActivityEvent</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTrackingNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber">TrackingNumber</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber">TrackingNumber</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>trackingNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getTrackingNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand">Add Tracking Event Command</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>eventTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            <tr>
+                <td>eventType</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getEventTime</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getEventType</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setEventTime</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.util.Date">Date</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setEventType</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setLocation</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand">Assign Tracking Number Command class</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>trackingNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTrackingNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setBookingId</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setTrackingNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent">TrackingActivityEvent</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>trackingEvents</td>
+                <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent">Tracking Event Details</a>&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getTrackingEvents</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">List</span>&lt;<a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent">Tracking Event Details</a>&gt;</td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId">Aggregate Identifier for the Cargo Aggregate</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>bookingId</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getBookingId</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent">Tracking Event Details</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td><span class="weak">Long</span></td>
+            </tr>
+            <tr>
+                <td>trackingVoyageNumber</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber">TrackingVoyageNumber</a></td>
+            </tr>
+            <tr>
+                <td>trackingLocation</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</a></td>
+            </tr>
+            <tr>
+                <td>trackingEventType</td>
+                <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType">TrackingEventType</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getTrackingEventType</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType">TrackingEventType</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTrackingLocation</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getTrackingVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><a href="./domain.html#com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber">TrackingVoyageNumber</a></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType">TrackingEventType</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>eventType</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            <tr>
+                <td>eventTime</td>
+                <td><span class="weak">Date</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getEventTime</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">Date</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ getEventType</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setEventTime</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.util.Date">Date</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setEventType</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>unLocCode</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getUnLocCode</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setUnLocCode</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+            <section class="type">
+        <h2><a name="com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber">TrackingVoyageNumber</a></h2>
+        <div class="fully-qualified-name">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber</div>
+
+        
+            
+        
+
+        
+
+        <table class="fields">
+            <thead>
+            <tr>
+                <th width="20%">フィールド</th>
+                <th>フィールド型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>voyageNumber</td>
+                <td><span class="weak">String</span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        
+            <table>
+                <thead>
+                <tr>
+                    <th width="20%">メソッド</th>
+                    <th>引数</th>
+                    <th>戻り値型</th>
+                    <th>説明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="method-name">+ getVoyageNumber</td>
+                    <td>
+                        
+                    </td>
+                    <td><span class="weak">String</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+                <tr>
+                    <td class="method-name">+ setVoyageNumber</td>
+                    <td>
+                        <a class="method-argument-item" href="#java.lang.String">String</a>
+                    </td>
+                    <td><span class="weak">void</span></td>
+                    <td class="markdown javadoc"></td>
+                </tr>
+            </table>
+        
+        
+            
+        
+    </section>
+        
+    </main>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@5.1.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js"></script>
+    <script src="./assets/jig.js"></script>
+
+</body>
+</html>

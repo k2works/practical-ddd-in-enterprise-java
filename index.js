@@ -2,21 +2,24 @@ import "./style.css";
 import render from "@k2works/full-stack-lab";
 
 const contents = `
-## 機能名
-## 仕様
-## TODOリスト
+## ドメイン
+
+- [荷物追跡アプリケーション](./docs/jig/cargotracker/index.html)
+    - [予約サービス](./docs/jig/booking/index.html)
+    - [荷役サービス](./docs/jig/handling/index.html)
+    - [経路サービス](./docs/jig/routing/index.html)
+    - [追跡サービス](./docs/jig/tracking/index.html)
+
 `;
 
 const mindmap = `
 @startmindmap
-+ root
-++ right
-+++ right right
-*** right2
--- left
---- left left
--- left2
-
+* 荷物追跡アプリケーション
+** 予約サービス
+** 荷役サービス
+left side
+** 経路サービス
+** 追跡サービス
 @endmindmap
 `;
 
@@ -200,5 +203,5 @@ e01 |o..o{ e03
 @enduml
 `;
 
-const mode = "APP"; // "UI" or "API" or "DOC"
+const mode = "DOC"; // "UI" or "API" or "DOC"
 render({ mindmap, contents, ui, uiModel, uiInteraction, usecase, uml, erd, mode });

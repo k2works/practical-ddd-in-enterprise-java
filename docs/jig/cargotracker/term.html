@@ -1,0 +1,630 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico">
+    <title>用語集</title>
+</head>
+<body>
+<header class="top">
+    <a href="./index.html">[INDEX]</a>
+    <b>用語集</b>
+</header>
+<main class="terms">
+    <div>
+        表示切り替え:
+        <button onclick="toggleTableColumn('termTable', 0)">用語（物理名）</button>
+        <button onclick="toggleTableColumn('termTable', 3)">種類</button>
+        <button onclick="toggleTableColumn('termTable', 4)">識別子</button>
+    </div>
+    <div>
+        <label for="filterText">フィルタ: </label><input type="text" id="filterText" placeholder="部分一致" size="50">
+        <button onclick="filterTable('termTable', 'filterText')">実行</button>
+    </div>
+
+    <table id="termTable">
+        <thead>
+        <tr>
+            <th onclick="sortTable('termTable', 0)">用語（物理名）</th>
+            <th onclick="sortTable('termTable', 1)">用語</th>
+            <th>説明</th>
+            <th onclick="sortTable('termTable', 3)">種類</th>
+            <th onclick="sortTable('termTable', 4)">識別子</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="term">CargoBookingCommandService</td>
+            <td class="term">Application Service class for the Cargo Booking Command</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.commandservices.CargoBookingCommandService</td>
+        </tr>
+        <tr>
+            <td class="term">ExternalCargoRoutingService</td>
+            <td class="term">Anti Corruption Service Class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.outboundservices.acl.ExternalCargoRoutingService</td>
+        </tr>
+        <tr>
+            <td class="term">CargoBookingQueryService</td>
+            <td class="term">Application Service which caters to all queries related to the Booking Bounded Context</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.queryservices.CargoBookingQueryService</td>
+        </tr>
+        <tr>
+            <td class="term">BookingId</td>
+            <td class="term">Aggregate Identifier for the Cargo Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId</td>
+        </tr>
+        <tr>
+            <td class="term">BookCargoCommand</td>
+            <td class="term">Book Cargo Command class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand</td>
+        </tr>
+        <tr>
+            <td class="term">RouteCargoCommand</td>
+            <td class="term">Command Class to assign a route to a booked cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand</td>
+        </tr>
+        <tr>
+            <td class="term">Location</td>
+            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.entities.Location</td>
+        </tr>
+        <tr>
+            <td class="term">BookingAmount</td>
+            <td class="term">Domain model representation of the Booking Amount for a new Cargo.</td>
+            <td class="markdown javadoc">Contains the Booking Amount of the Cargo</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount</td>
+        </tr>
+        <tr>
+            <td class="term">CargoHandlingActivity</td>
+            <td class="term">A handling activity represents how and where a cargo can be handled, and can</td>
+            <td class="markdown javadoc">be used to express predictions about what is expected to happen to a cargo in
+the future.</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity</td>
+        </tr>
+        <tr>
+            <td class="term">Voyage</td>
+            <td class="term"> Class representing the Cargo Voyage</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage</td>
+        </tr>
+        <tr>
+            <td class="term">CargoRepository</td>
+            <td class="term">Repository class for the Cargo Aggregate. Deals with all repository operations</td>
+            <td class="markdown javadoc">related to the state of the Cargo</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository</td>
+        </tr>
+        <tr>
+            <td class="term">BookCargoResource</td>
+            <td class="term">Resource class for the Book Cargo Command API</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.dto.BookCargoResource</td>
+        </tr>
+        <tr>
+            <td class="term">RouteCargoResource</td>
+            <td class="term">Resource class for the Book Cargo Command API</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.dto.RouteCargoResource</td>
+        </tr>
+        <tr>
+            <td class="term">BookCargoCommandDTOAssembler</td>
+            <td class="term">Assembler class to convert the Book Cargo Resource Data to the Book Cargo Model</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.transform.BookCargoCommandDTOAssembler</td>
+        </tr>
+        <tr>
+            <td class="term">RouteCargoCommandDTOAssembler</td>
+            <td class="term">Assembler class to convert the Book Cargo Resource Data to the Book Cargo Model</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.transform.RouteCargoCommandDTOAssembler</td>
+        </tr>
+        <tr>
+            <td class="term">HandlingHistoryService</td>
+            <td class="term">Application Service which caters to all queries related to the Handling Activity Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.application.internal.queryservices.HandlingHistoryService</td>
+        </tr>
+        <tr>
+            <td class="term">HandlingActivity</td>
+            <td class="term">Root Aggregate for the Handling Bounded Context</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity</td>
+        </tr>
+        <tr>
+            <td class="term">HandlingActivityRegistrationCommand</td>
+            <td class="term">Command to Register an Handling Activity</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand</td>
+        </tr>
+        <tr>
+            <td class="term">Location</td>
+            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location</td>
+        </tr>
+        <tr>
+            <td class="term">Type</td>
+            <td class="term">Handling event type. Either requires or prohibits a carrier movement</td>
+            <td class="markdown javadoc">association, it's never optional.</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type</td>
+        </tr>
+        <tr>
+            <td class="term">CargoHandlingController</td>
+            <td class="term">Controller for the REST API</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.interfaces.rest.CargoHandlingController</td>
+        </tr>
+        <tr>
+            <td class="term">HandlingActivityRegistrationCommandDTOAssembler</td>
+            <td class="term">Assembler class to convert the Book Cargo Resource Data to the Book Cargo Model</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.interfaces.rest.transform.HandlingActivityRegistrationCommandDTOAssembler</td>
+        </tr>
+        <tr>
+            <td class="term">CargoRoutingQueryService</td>
+            <td class="term">Application Service class for the Cargo Routing Query service</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.application.internal.queryservices.CargoRoutingQueryService</td>
+        </tr>
+        <tr>
+            <td class="term">Location</td>
+            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location</td>
+        </tr>
+        <tr>
+            <td class="term">Schedule</td>
+            <td class="term">A Voyage schedule</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule</td>
+        </tr>
+        <tr>
+            <td class="term">VoyageRepository</td>
+            <td class="term">Repository class for the Voyage Aggregate.</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.infrastructure.repositories.jpa.VoyageRepository</td>
+        </tr>
+        <tr>
+            <td class="term">CargoHandledEventData</td>
+            <td class="term">Event Data for the Cargo Handled Event</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.shareddomain.events.CargoHandledEventData</td>
+        </tr>
+        <tr>
+            <td class="term">CargoRoutedEventData</td>
+            <td class="term">Event Data for the Cargo Routed Event</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.shareddomain.events.CargoRoutedEventData</td>
+        </tr>
+        <tr>
+            <td class="term">TransitEdge</td>
+            <td class="term">Represents an edge in a path through a graph, describing the route of a</td>
+            <td class="markdown javadoc">cargo.</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.shareddomain.model.TransitEdge</td>
+        </tr>
+        <tr>
+            <td class="term">AssignTrackingIdCommandService</td>
+            <td class="term">Application Service class for the Tracking Command Service</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.application.internal.commandservices.AssignTrackingIdCommandService</td>
+        </tr>
+        <tr>
+            <td class="term">AddTrackingEventCommand</td>
+            <td class="term">Add Tracking Event Command</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand</td>
+        </tr>
+        <tr>
+            <td class="term">AssignTrackingNumberCommand</td>
+            <td class="term">Assign Tracking Number Command class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingBookingId</td>
+            <td class="term">Aggregate Identifier for the Cargo Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingEvent</td>
+            <td class="term">Tracking Event Details</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingLocation</td>
+            <td class="term">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingRepository</td>
+            <td class="term">Repository class for the Tracking Aggregate. Deals with all repository operations</td>
+            <td class="markdown javadoc">related to the state of the Tracking of the Cargo</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingActivityCommandEventAssembler</td>
+            <td class="term">Assembler class to convert the Cargo Routed Event to the Assign Tracking Number Command Model</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.interfaces.events.transform.TrackingActivityCommandEventAssembler</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingDetailsCommandEventAssembler</td>
+            <td class="term">Assembler class to convert the Cargo Routed Event to the Assign Tracking Number Command Model</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.interfaces.events.transform.TrackingDetailsCommandEventAssembler</td>
+        </tr>
+        <tr>
+            <td class="term">assignRouteToCargo</td>
+            <td class="term">Service Command method to assign a route to a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.commandservices.CargoBookingCommandService#assignRouteToCargo()</td>
+        </tr>
+        <tr>
+            <td class="term">bookCargo</td>
+            <td class="term">Service Command method to book a new Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.commandservices.CargoBookingCommandService#bookCargo()</td>
+        </tr>
+        <tr>
+            <td class="term">fetchRouteForSpecification</td>
+            <td class="term">The Booking Bounded Context makes an external call to the Routing Service of the Routing Bounded Context to</td>
+            <td class="markdown javadoc">fetch the Optimal Itinerary for a Cargo based on the Route Specification</td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.outboundservices.acl.ExternalCargoRoutingService#fetchRouteForSpecification()</td>
+        </tr>
+        <tr>
+            <td class="term">toLeg</td>
+            <td class="term">Anti-corruption layer conversion method from the routing service&#39;s domain model (TransitEdges)</td>
+            <td class="markdown javadoc">to the domain model recognized by the Booking Bounded Context (Legs)</td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.outboundservices.acl.ExternalCargoRoutingService#toLeg()</td>
+        </tr>
+        <tr>
+            <td class="term">find</td>
+            <td class="term">Find a specific Cargo based on its Booking Id</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.queryservices.CargoBookingQueryService#find()</td>
+        </tr>
+        <tr>
+            <td class="term">findAll</td>
+            <td class="term">Find all Cargos</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.queryservices.CargoBookingQueryService#findAll()</td>
+        </tr>
+        <tr>
+            <td class="term">getAllBookingIds</td>
+            <td class="term">List All Booking Identifiers</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.queryservices.CargoBookingQueryService#getAllBookingIds()</td>
+        </tr>
+        <tr>
+            <td class="term">assignToRoute</td>
+            <td class="term">Assigns Route to the Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo#assignToRoute()</td>
+        </tr>
+        <tr>
+            <td class="term">getItinerary</td>
+            <td class="term">getItinerary</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo#getItinerary()</td>
+        </tr>
+        <tr>
+            <td class="term">calculateCurrentVoyage</td>
+            <td class="term">calculateCurrentVoyage</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#calculateCurrentVoyage()</td>
+        </tr>
+        <tr>
+            <td class="term">calculateLastKnownLocation</td>
+            <td class="term">Calculate Last known location</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#calculateLastKnownLocation()</td>
+        </tr>
+        <tr>
+            <td class="term">calculateRoutingStatus</td>
+            <td class="term">Method to calculate the Routing status of a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#calculateRoutingStatus()</td>
+        </tr>
+        <tr>
+            <td class="term">calculateTransportStatus</td>
+            <td class="term">Method to calculate the Transposrt Status of a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#calculateTransportStatus()</td>
+        </tr>
+        <tr>
+            <td class="term">derivedFrom</td>
+            <td class="term">derivedFrom</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#derivedFrom()</td>
+        </tr>
+        <tr>
+            <td class="term">updateOnRouting</td>
+            <td class="term">Creates a new delivery snapshot to reflect changes in routing, i.e. when</td>
+            <td class="markdown javadoc">the route specification or the itinerary has changed but no additional
+handling of the cargo has been performed.</td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery#updateOnRouting()</td>
+        </tr>
+        <tr>
+            <td class="term">find</td>
+            <td class="term">Returns the Cargo Aggregate based on the Booking Identifier of a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository#find()</td>
+        </tr>
+        <tr>
+            <td class="term">findAll</td>
+            <td class="term">Find all Cargo Aggregates</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository#findAll()</td>
+        </tr>
+        <tr>
+            <td class="term">findAllBookingIds</td>
+            <td class="term">Get all Booking Identifiers</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository#findAllBookingIds()</td>
+        </tr>
+        <tr>
+            <td class="term">store</td>
+            <td class="term">Stores the Cargo Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository#store()</td>
+        </tr>
+        <tr>
+            <td class="term">routeCargo</td>
+            <td class="term">POST method to route a cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.CargoRoutingController#routeCargo()</td>
+        </tr>
+        <tr>
+            <td class="term">toCommandFromDTO</td>
+            <td class="term">Static method within the Assembler class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.transform.BookCargoCommandDTOAssembler#toCommandFromDTO()</td>
+        </tr>
+        <tr>
+            <td class="term">toCommandFromDTO</td>
+            <td class="term">Static method within the Assembler class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.interfaces.rest.transform.RouteCargoCommandDTOAssembler#toCommandFromDTO()</td>
+        </tr>
+        <tr>
+            <td class="term">registerHandlingActivityService</td>
+            <td class="term">Service Command method to register a new Handling Activity</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.application.internal.commandservices.HandlingActivityRegistrationCommandService#registerHandlingActivityService()</td>
+        </tr>
+        <tr>
+            <td class="term">getDistinctEventsByCompletionTime</td>
+            <td class="term">getDistinctEventsByCompletionTime</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory#getDistinctEventsByCompletionTime()</td>
+        </tr>
+        <tr>
+            <td class="term">getMostRecentlyCompletedEvent</td>
+            <td class="term">getMostRecentlyCompletedEvent</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory#getMostRecentlyCompletedEvent()</td>
+        </tr>
+        <tr>
+            <td class="term">prohibitsVoyage</td>
+            <td class="term">prohibitsVoyage</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type#prohibitsVoyage()</td>
+        </tr>
+        <tr>
+            <td class="term">requiresVoyage</td>
+            <td class="term">requiresVoyage</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type#requiresVoyage()</td>
+        </tr>
+        <tr>
+            <td class="term">lookupHandlingHistoryOfCargo</td>
+            <td class="term">Get the entire handling history for a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.infrastructure.repositories.jpa.HandlingActivityRepository#lookupHandlingHistoryOfCargo()</td>
+        </tr>
+        <tr>
+            <td class="term">registerHandlingActivity</td>
+            <td class="term">POST method to register Handling Activities</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.interfaces.rest.CargoHandlingController#registerHandlingActivity()</td>
+        </tr>
+        <tr>
+            <td class="term">toCommandFromDTO</td>
+            <td class="term">Static method within the Assembler class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.interfaces.rest.transform.HandlingActivityRegistrationCommandDTOAssembler#toCommandFromDTO()</td>
+        </tr>
+        <tr>
+            <td class="term">findAll</td>
+            <td class="term">Returns all Voyages</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.application.internal.queryservices.CargoRoutingQueryService#findAll()</td>
+        </tr>
+        <tr>
+            <td class="term">findAll</td>
+            <td class="term">Find all Voyage Aggregates</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.infrastructure.repositories.jpa.VoyageRepository#findAll()</td>
+        </tr>
+        <tr>
+            <td class="term">store</td>
+            <td class="term">Stores the Voyage Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.infrastructure.repositories.jpa.VoyageRepository#store()</td>
+        </tr>
+        <tr>
+            <td class="term">findOptimalRoute</td>
+            <td class="term">A highly simplistic implementation of the Routing algorithm.</td>
+            <td class="markdown javadoc">It works only with the specifications given in the test case (CNHKG - USNYC and 2019-09-28).
+The Domain Model can be changed to implement more sophisticated algorithms</td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.interfaces.rest.CargoRoutingController#findOptimalRoute()</td>
+        </tr>
+        <tr>
+            <td class="term">addTrackingEvent</td>
+            <td class="term">Service Command method to assign a route to a Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.application.internal.commandservices.AssignTrackingIdCommandService#addTrackingEvent()</td>
+        </tr>
+        <tr>
+            <td class="term">assignTrackingNumberToCargo</td>
+            <td class="term">Service Command method to assign a tracking id to the booked cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.application.internal.commandservices.AssignTrackingIdCommandService#assignTrackingNumberToCargo()</td>
+        </tr>
+        <tr>
+            <td class="term">addTrackingEvent</td>
+            <td class="term">Add a tracking event to the Tracking Details</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity#addTrackingEvent()</td>
+        </tr>
+        <tr>
+            <td class="term">find</td>
+            <td class="term">Returns the Cargo Aggregate based on the Tracking Number of the Cargo</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository#find()</td>
+        </tr>
+        <tr>
+            <td class="term">findAll</td>
+            <td class="term">Find all Tracking Activity Aggregates</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository#findAll()</td>
+        </tr>
+        <tr>
+            <td class="term">findAllTrackingNumbers</td>
+            <td class="term">Get all Tracking Numbers</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository#findAllTrackingNumbers()</td>
+        </tr>
+        <tr>
+            <td class="term">findByBookingId</td>
+            <td class="term">Returns the Tracking Aggregate based on the Booking Identifier</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository#findByBookingId()</td>
+        </tr>
+        <tr>
+            <td class="term">store</td>
+            <td class="term">Stores the Tracking Activity Aggregate</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository#store()</td>
+        </tr>
+        <tr>
+            <td class="term">observeCargoHandledEvent</td>
+            <td class="term">Cargo Handled Event handler</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.interfaces.events.CargoHandledEventHandler#observeCargoHandledEvent()</td>
+        </tr>
+        <tr>
+            <td class="term">toCommandFromEvent</td>
+            <td class="term">Static method within the Assembler class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.interfaces.events.transform.TrackingActivityCommandEventAssembler#toCommandFromEvent()</td>
+        </tr>
+        <tr>
+            <td class="term">toCommandFromEvent</td>
+            <td class="term">Static method within the Assembler class</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">メソッド</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.interfaces.events.transform.TrackingDetailsCommandEventAssembler#toCommandFromEvent()</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@5.1.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js"></script>
+    <script src="./assets/jig.js"></script>
+
+</body>
+</html>

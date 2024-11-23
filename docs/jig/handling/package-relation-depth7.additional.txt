@@ -1,0 +1,7 @@
+# com.practicalddd.cargotracker.handling.domain.model.aggregates <-> com.practicalddd.cargotracker.handling.domain.model.valueobjects
+- com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity -> com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId
+- com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity -> com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location
+- com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity -> com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type
+- com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity -> com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber
+- com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory -> com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity
+- com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory -> com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity
