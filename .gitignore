@@ -236,3 +236,5 @@ dist
 .pnp.*
 
 .idea
+ops/docker/schemaspy/
+public

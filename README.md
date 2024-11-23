@@ -1,16 +1,40 @@
-# Apress Source Code
+# intercept-booster-2
 
-This repository accompanies [*Practical Domain-Driven Design in Enterprise Java*](https://www.apress.com/9781484245422) by Vijay Nair (Apress, 2019).
+[![Node.js CI](https://github.com/k2works/intercept-booster-2-sample/actions/workflows/node.js.yml/badge.svg)](https://github.com/k2works/intercept-booster-2-sample/actions/workflows/node.js.yml)
 
-[comment]: #cover
-![Cover image](9781484245422.jpg)
+## 概要
 
-Download the files as a zip using the green button, or clone the repository to your machine using Git.
+[ガイドライン](./docs/slides/PITCHME.md)
 
-## Releases
+### 目的
 
-Release v1.0 corresponds to the code in the published book, without corrections or updates.
+### 前提
 
-## Contributions
+| ソフトウェア | バージョン | 備考 |
+| :----------- |:------| :--- |
+| nodejs       | 20.x  |      |
 
-See the file Contributing.md for more information on how you can contribute to this repository.
+### Quick Start
+
+```bash
+npm install
+npm start
+```
+## 構成
+
+- [要件](./docs/req.adoc)
+- [開発](./docs/dev.adoc)
+- [構築](./docs/build.adoc)
+- [配置](./docs/ship.adoc)
+- [運用](./docs/run.adoc)
+
+## 参照
+
+- [Conventional Commits 1.0.0](https://www.conventionalcommits.org/ja/v1.0.0/)
+- [@k2works/intercept-booster-2](https://www.npmjs.com/package/@k2works/intercept-booster-2)
+- [@k2works/full-stack-lab](https://www.npmjs.com/package/@k2works/full-stack-lab)
+- [@k2works/adr](https://www.npmjs.com/package/@k2works/adr)
+- [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start)
+- [Asciidoctor](https://asciidoctor.org/)
+- [Browsersync](https://browsersync.io/)
+- [Marp](https://marp.app/)
