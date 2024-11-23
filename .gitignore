@@ -238,3 +238,4 @@ dist
 .idea
 ops/docker/schemaspy/
 public
+.DS_Store
