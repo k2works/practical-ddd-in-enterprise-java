@@ -240,3 +240,4 @@ ops/docker/schemaspy/
 public
 .DS_Store
 target/
+!jig-cli.jar

@@ -84,14 +84,14 @@
         </tr>
         <tr>
             <td class="term">BookingAmount</td>
-            <td class="term">Domain model representation of the Booking Amount for a new Cargo.</td>
+            <td class="term">Domain model representation of the Booking Amount for a new Cargo.</td>
             <td class="markdown javadoc">Contains the Booking Amount of the Cargo</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount</td>
         </tr>
         <tr>
             <td class="term">CargoHandlingActivity</td>
-            <td class="term">A handling activity represents how and where a cargo can be handled, and can</td>
+            <td class="term">A handling activity represents how and where a cargo can be handled, and can</td>
             <td class="markdown javadoc">be used to express predictions about what is expected to happen to a cargo in
 the future.</td>
             <td class="kind">クラス</td>
@@ -106,7 +106,7 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">CargoRepository</td>
-            <td class="term">Repository class for the Cargo Aggregate. Deals with all repository operations</td>
+            <td class="term">Repository class for the Cargo Aggregate. Deals with all repository operations</td>
             <td class="markdown javadoc">related to the state of the Cargo</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.infrastructure.repositories.jpa.CargoRepository</td>
@@ -169,7 +169,7 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">Type</td>
-            <td class="term">Handling event type. Either requires or prohibits a carrier movement</td>
+            <td class="term">Handling event type. Either requires or prohibits a carrier movement</td>
             <td class="markdown javadoc">association, it's never optional.</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type</td>
@@ -232,7 +232,7 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">TransitEdge</td>
-            <td class="term">Represents an edge in a path through a graph, describing the route of a</td>
+            <td class="term">Represents an edge in a path through a graph, describing the route of a</td>
             <td class="markdown javadoc">cargo.</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.shareddomain.model.TransitEdge</td>
@@ -281,7 +281,7 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">TrackingRepository</td>
-            <td class="term">Repository class for the Tracking Aggregate. Deals with all repository operations</td>
+            <td class="term">Repository class for the Tracking Aggregate. Deals with all repository operations</td>
             <td class="markdown javadoc">related to the state of the Tracking of the Cargo</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.infrastructure.repositories.jpa.TrackingRepository</td>
@@ -316,14 +316,14 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">fetchRouteForSpecification</td>
-            <td class="term">The Booking Bounded Context makes an external call to the Routing Service of the Routing Bounded Context to</td>
+            <td class="term">The Booking Bounded Context makes an external call to the Routing Service of the Routing Bounded Context to</td>
             <td class="markdown javadoc">fetch the Optimal Itinerary for a Cargo based on the Route Specification</td>
             <td class="kind">メソッド</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.outboundservices.acl.ExternalCargoRoutingService#fetchRouteForSpecification()</td>
         </tr>
         <tr>
             <td class="term">toLeg</td>
-            <td class="term">Anti-corruption layer conversion method from the routing service&#39;s domain model (TransitEdges)</td>
+            <td class="term">Anti-corruption layer conversion method from the routing service&#39;s domain model (TransitEdges)</td>
             <td class="markdown javadoc">to the domain model recognized by the Booking Bounded Context (Legs)</td>
             <td class="kind">メソッド</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.application.internal.outboundservices.acl.ExternalCargoRoutingService#toLeg()</td>
@@ -400,7 +400,7 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">updateOnRouting</td>
-            <td class="term">Creates a new delivery snapshot to reflect changes in routing, i.e. when</td>
+            <td class="term">Creates a new delivery snapshot to reflect changes in routing, i.e. when</td>
             <td class="markdown javadoc">the route specification or the itinerary has changed but no additional
 handling of the cargo has been performed.</td>
             <td class="kind">メソッド</td>
@@ -534,7 +534,7 @@ handling of the cargo has been performed.</td>
         </tr>
         <tr>
             <td class="term">findOptimalRoute</td>
-            <td class="term">A highly simplistic implementation of the Routing algorithm.</td>
+            <td class="term">A highly simplistic implementation of the Routing algorithm.</td>
             <td class="markdown javadoc">It works only with the specifications given in the test case (CNHKG - USNYC and 2019-09-28).
 The Domain Model can be changed to implement more sophisticated algorithms</td>
             <td class="kind">メソッド</td>
