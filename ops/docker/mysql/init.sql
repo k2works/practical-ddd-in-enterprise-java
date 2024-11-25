@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS cargotracker;
-USE cargotracker;
+CREATE DATABASE IF NOT EXISTS bookingmsdb;
+USE bookingmsdb;
 
 ## Cargo テーブルのDDL
 CREATE TABLE `cargo` (
@@ -44,33 +44,6 @@ CREATE TABLE `location` (
                             `UNLOCODE` varchar(100) DEFAULT NULL COMMENT 'UNLOCODE'
 ) COMMENT '場所テーブル' ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-## Voyage テーブルのDDL
-CREATE TABLE `voyage` (
-                          `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自動インクリメントのID',
-                          `voyage_number` varchar(20) NOT NULL COMMENT '航海番号',
-                          PRIMARY KEY (`Id`)
-) COMMENT '航海テーブル' ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-## Carrier Movement テーブルのDDL
-CREATE TABLE `carrier_movement` (
-                                    `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自動インクリメントのID',
-                                    `arrival_location_id` varchar(100) DEFAULT NULL COMMENT '到着場所ID',
-                                    `departure_location_id` varchar(100) DEFAULT NULL COMMENT '出発場所ID',
-                                    `voyage_id` int(11) DEFAULT NULL COMMENT '航海ID',
-                                    `arrival_date` date DEFAULT NULL COMMENT '到着日',
-                                    `departure_date` date DEFAULT NULL COMMENT '出発日',
-                                    PRIMARY KEY (`Id`)
-) COMMENT '運送経路テーブル' ENGINE=InnoDB AUTO_INCREMENT=1358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-## Routing 作業確認のデータ
-insert voyage (Id, voyage_number) values (3, '0100S');
-insert voyage (Id, voyage_number) values (4, '0101S');
-insert voyage (Id, voyage_number) values (5, '0102S');
-
-insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1355, 'CNHGH', 'CNHKG', 3, '2019-08-28', '2019-08-25');
-insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1356, 'JNTKO', 'CNHGH', 4, '2019-09-10', '2019-09-01');
-insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1357, 'USNYC', 'JNTKO', 5, '2019-09-25', '2019-09-15');
-
 ## Tracking Activity テーブルのDDL
 CREATE TABLE `tracking_activity` (
                                      `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自動インクリメントのID',
@@ -100,3 +73,32 @@ CREATE TABLE `handling_activity` (
                                      `location` varchar(100) DEFAULT NULL COMMENT '場所',
                                      PRIMARY KEY (`id`)
 ) COMMENT 'ハンドリングアクティビティテーブル' ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS routingmsdb;
+USE routingmsdb;
+
+## Voyage テーブルのDDL
+CREATE TABLE `voyage` (
+                          `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自動インクリメントのID',
+                          `voyage_number` varchar(20) NOT NULL COMMENT '航海番号',
+                          PRIMARY KEY (`Id`)
+) COMMENT '航海テーブル' ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+## Carrier Movement テーブルのDDL
+CREATE TABLE `carrier_movement` (
+                                    `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自動インクリメントのID',
+                                    `arrival_location_id` varchar(100) DEFAULT NULL COMMENT '到着場所ID',
+                                    `departure_location_id` varchar(100) DEFAULT NULL COMMENT '出発場所ID',
+                                    `voyage_id` int(11) DEFAULT NULL COMMENT '航海ID',
+                                    `arrival_date` date DEFAULT NULL COMMENT '到着日',
+                                    `departure_date` date DEFAULT NULL COMMENT '出発日',
+                                    PRIMARY KEY (`Id`)
+) COMMENT '運送経路テーブル' ENGINE=InnoDB AUTO_INCREMENT=1358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+## Routing 作業確認のデータ
+insert voyage (Id, voyage_number) values (3, '0100S');
+insert voyage (Id, voyage_number) values (4, '0101S');
+insert voyage (Id, voyage_number) values (5, '0102S');
+
+insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1355, 'CNHGH', 'CNHKG', 3, '2019-08-28', '2019-08-25');
+insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1356, 'JNTKO', 'CNHGH', 4, '2019-09-10', '2019-09-01');
+insert into carrier_movement (Id, arrival_location_id, departure_location_id, voyage_id, arrival_date, departure_date) values (1357, 'USNYC', 'JNTKO', 5, '2019-09-25', '2019-09-15');
