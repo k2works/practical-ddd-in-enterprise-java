@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A Voyage schedule
+ * 航海予定
  */
 @Embeddable
 public class Schedule {

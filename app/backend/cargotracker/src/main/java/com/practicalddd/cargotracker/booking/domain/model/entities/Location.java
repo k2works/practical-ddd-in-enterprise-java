@@ -4,7 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- * Location class represented by a unique 5-diigit UN Location code.
+ * 位置
+ * 5桁のUNロケーションコードで表される
  */
 @Embeddable
 public class Location {

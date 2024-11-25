@@ -5,6 +5,9 @@ import javax.persistence.*;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 貨物旅程
+ */
 @Embeddable
 public class CargoItinerary {
 

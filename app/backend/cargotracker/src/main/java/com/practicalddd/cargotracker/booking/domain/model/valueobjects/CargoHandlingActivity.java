@@ -6,10 +6,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * A handling activity represents how and where a cargo can be handled, and can
- * be used to express predictions about what is expected to happen to a cargo in
- * the future.
- *
+ * 荷役
+ * 取り扱い活動は、貨物がどのように、そしてどこで扱われるかを表し、貨物に
+ * 将来何が起こると予想されるかを表現するために使用することができます。
  */
 @Embeddable
 public class CargoHandlingActivity implements Serializable {

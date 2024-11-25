@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- *  Class representing the Cargo Voyage
+ * 航海
  */
 @Embeddable
 public class Voyage {

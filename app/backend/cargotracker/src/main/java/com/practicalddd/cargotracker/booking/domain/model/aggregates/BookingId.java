@@ -6,7 +6,8 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 /**
- * Aggregate Identifier for the Cargo Aggregate
+ * 予約ID
+ * 貨物集約のための集約ID
  */
 @Embeddable
 public class BookingId implements Serializable {

@@ -4,6 +4,9 @@ package com.practicalddd.cargotracker.booking.domain.model.valueobjects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 最終荷役イベント
+ */
 @Embeddable
 public class LastCargoHandledEvent {
 

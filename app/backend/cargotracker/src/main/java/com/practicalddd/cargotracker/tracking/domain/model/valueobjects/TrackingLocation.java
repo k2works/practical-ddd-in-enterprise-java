@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- * TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.
+ * 追跡位置
  */
 @Embeddable
 public class TrackingLocation {

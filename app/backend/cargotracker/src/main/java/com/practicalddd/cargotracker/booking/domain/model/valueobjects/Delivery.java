@@ -7,9 +7,9 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Domain class which tracks the progress of the Cargo against the Route Specification / Itinerary and Handling Events.
+ * 配送
+ * ルート仕様／旅程および取り扱いイベントに対して貨物の進捗を追跡するドメインクラス。
  */
-
 @Embeddable
 public class Delivery {
 

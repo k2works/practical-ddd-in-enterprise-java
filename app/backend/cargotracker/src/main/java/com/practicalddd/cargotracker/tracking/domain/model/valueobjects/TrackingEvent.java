@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Tracking Event Details
+ * 追跡イベント詳細
  */
 @Entity
 @Table(name="tracking_handling_events")

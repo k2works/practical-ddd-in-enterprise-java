@@ -3,7 +3,7 @@ package com.practicalddd.cargotracker.tracking.domain.model.commands;
 import java.util.Date;
 
 /**
- * Add Tracking Event Command
+ * 追跡追加
  */
 public class AddTrackingEventCommand {
     private String bookingId;

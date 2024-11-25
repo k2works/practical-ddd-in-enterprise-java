@@ -7,6 +7,9 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 
+/**
+ * 追跡イベントタイプ
+ */
 @Embeddable
 public class TrackingEventType {
 

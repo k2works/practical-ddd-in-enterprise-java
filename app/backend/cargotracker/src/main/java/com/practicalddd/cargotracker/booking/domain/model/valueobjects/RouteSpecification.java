@@ -6,6 +6,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+/**
+ * 貨物のルート仕様
+ */
 @Embeddable
 public class RouteSpecification {
     private static final long serialVersionUID = 1L;

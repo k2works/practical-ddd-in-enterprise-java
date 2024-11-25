@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 追跡イベント
+ */
 @Embeddable
 public class TrackingActivityEvent {
 

@@ -3,7 +3,7 @@ package com.practicalddd.cargotracker.booking.domain.model.commands;
 
 
 /**
- * Command Class to assign a route to a booked cargo
+ * 貨物経路
  */
 public class RouteCargoCommand {
     private String cargoBookingId;

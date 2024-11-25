@@ -6,7 +6,7 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 /**
- * Aggregate Identifier for the Cargo Aggregate
+ * 予約追跡ID
  */
 @Embeddable
 public class TrackingBookingId implements Serializable {

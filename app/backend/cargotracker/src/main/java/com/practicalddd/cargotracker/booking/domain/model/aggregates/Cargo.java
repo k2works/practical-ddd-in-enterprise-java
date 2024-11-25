@@ -7,8 +7,9 @@ import com.practicalddd.cargotracker.booking.domain.model.valueobjects.*;
 import javax.persistence.*;
 
 
-
-
+/**
+ * 貨物
+ */
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Cargo.findAll",

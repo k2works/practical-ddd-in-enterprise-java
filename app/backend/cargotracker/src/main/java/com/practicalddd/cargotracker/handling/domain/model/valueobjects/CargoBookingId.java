@@ -3,6 +3,9 @@ package com.practicalddd.cargotracker.handling.domain.model.valueobjects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 貨物予約ID
+ */
 @Embeddable
 public class CargoBookingId {
     @Column(name = "booking_id")

@@ -9,7 +9,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Root Aggregate for the Handling Bounded Context
+ * 荷役
+ * ルート仕様／旅程および取り扱いイベントに対して貨物の進捗を追跡するドメインクラス。
  */
 @Entity
 @NamedQuery(name = "HandlingEvent.findByBookingId",

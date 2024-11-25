@@ -4,6 +4,9 @@ import com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingAc
 
 import java.util.*;
 
+/**
+ * 荷役履歴
+ */
 public class HandlingActivityHistory {
 
     private final List<HandlingActivity> handlingEvents;

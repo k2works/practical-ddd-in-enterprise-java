@@ -4,6 +4,9 @@ package com.practicalddd.cargotracker.tracking.domain.model.aggregates;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 追跡番号
+ */
 @Embeddable
 public class TrackingNumber {
 

@@ -4,8 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- * Domain model representation of the Booking Amount for a new Cargo.
- * Contains the Booking Amount of the Cargo
+ * 予約数量
+ * ドメインモデルで新しい貨物の予約数量を表す
  */
 @Embeddable
 public class BookingAmount {

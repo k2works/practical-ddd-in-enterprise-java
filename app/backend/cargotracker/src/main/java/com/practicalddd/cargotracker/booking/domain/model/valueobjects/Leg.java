@@ -7,6 +7,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+/**
+ * 旅程
+ */
 @Entity
 public class Leg {
     private static final long serialVersionUID = 1L;

@@ -3,7 +3,7 @@ package com.practicalddd.cargotracker.handling.domain.model.commands;
 import java.util.Date;
 
 /**
- * Command to Register an Handling Activity
+ * 荷役登録
  */
 public class HandlingActivityRegistrationCommand {
 

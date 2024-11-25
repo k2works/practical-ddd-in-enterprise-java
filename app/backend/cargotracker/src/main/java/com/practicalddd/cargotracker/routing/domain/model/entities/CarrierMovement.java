@@ -6,6 +6,9 @@ import com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * 移動機器
+ */
 @Entity
 @Table(name="carrier_movement")
 public class CarrierMovement {

@@ -1,8 +1,7 @@
 package com.practicalddd.cargotracker.handling.domain.model.valueobjects;
 
 /**
- * Handling event type. Either requires or prohibits a carrier movement
- * association, it's never optional.
+ * 荷役タイプ
  */
 public enum Type {
 

@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Represents an edge in a path through a graph, describing the route of a
- * cargo.
+ * 貨物ルート
+ * グラフを通る経路内のエッジを表し、貨物のルートを記述します。
  */
 public class TransitEdge implements Serializable {
 

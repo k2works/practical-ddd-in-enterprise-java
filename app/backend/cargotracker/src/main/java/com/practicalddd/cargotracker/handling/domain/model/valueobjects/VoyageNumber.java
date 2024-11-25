@@ -3,6 +3,9 @@ package com.practicalddd.cargotracker.handling.domain.model.valueobjects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 航海番号
+ */
 @Embeddable
 public class VoyageNumber {
     @Column(name="voyage_number")

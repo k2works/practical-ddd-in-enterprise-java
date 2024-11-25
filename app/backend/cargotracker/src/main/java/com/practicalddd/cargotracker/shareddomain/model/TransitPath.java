@@ -5,6 +5,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 貨物ルートパス
+ */
 @XmlRootElement
 public class TransitPath implements Serializable {
 

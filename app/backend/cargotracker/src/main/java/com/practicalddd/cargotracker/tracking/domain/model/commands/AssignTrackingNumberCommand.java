@@ -3,7 +3,7 @@ package com.practicalddd.cargotracker.tracking.domain.model.commands;
 import java.util.Date;
 
 /**
- * Assign Tracking Number Command class
+ * 追跡番号割り当て
  */
 public class AssignTrackingNumberCommand {
     private String bookingId;

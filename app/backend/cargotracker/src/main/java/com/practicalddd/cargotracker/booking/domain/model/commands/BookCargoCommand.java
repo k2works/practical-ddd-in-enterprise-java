@@ -3,7 +3,7 @@ package com.practicalddd.cargotracker.booking.domain.model.commands;
 import java.util.Date;
 
 /**
- * Book Cargo Command class
+ * 貨物予約
  */
 public class BookCargoCommand {
     private String bookingId;

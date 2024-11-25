@@ -13,7 +13,9 @@ import com.practicalddd.cargotracker.tracking.domain.model.valueobjects.Tracking
 import javax.persistence.*;
 import java.util.Date;
 
-
+/**
+ * 追跡
+ */
 @Entity
 @NamedQueries({
         @NamedQuery(name = "TrackingActivity.findAll",

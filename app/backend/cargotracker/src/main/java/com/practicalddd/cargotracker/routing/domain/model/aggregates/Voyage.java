@@ -7,6 +7,9 @@ import com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNum
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+/**
+ * 航海
+ */
 @Entity
 @NamedQueries({
         @NamedQuery(name = "Voyage.findByVoyageNumber", query = "Select v from Voyage v where v.voyageNumber = :voyageNumber"),

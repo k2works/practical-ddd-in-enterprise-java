@@ -34,6 +34,104 @@
         </thead>
         <tbody>
         <tr>
+            <td class="term">aggregates</td>
+            <td class="term">集約</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates</td>
+        </tr>
+        <tr>
+            <td class="term">commands</td>
+            <td class="term">コマンド</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.commands</td>
+        </tr>
+        <tr>
+            <td class="term">entities</td>
+            <td class="term">エンティティ</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.entities</td>
+        </tr>
+        <tr>
+            <td class="term">valueobjects</td>
+            <td class="term">値オブジェクト</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects</td>
+        </tr>
+        <tr>
+            <td class="term">aggregates</td>
+            <td class="term">集約</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.aggregates</td>
+        </tr>
+        <tr>
+            <td class="term">commands</td>
+            <td class="term">コマンド</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.commands</td>
+        </tr>
+        <tr>
+            <td class="term">valueobjects</td>
+            <td class="term">値オブジェクト</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects</td>
+        </tr>
+        <tr>
+            <td class="term">aggregates</td>
+            <td class="term">集約</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.aggregates</td>
+        </tr>
+        <tr>
+            <td class="term">entities</td>
+            <td class="term">コマンド</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.entities</td>
+        </tr>
+        <tr>
+            <td class="term">valueobjects</td>
+            <td class="term">値オブジェクト</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects</td>
+        </tr>
+        <tr>
+            <td class="term">aggregates</td>
+            <td class="term">集約</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.aggregates</td>
+        </tr>
+        <tr>
+            <td class="term">commands</td>
+            <td class="term">コマンド</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.commands</td>
+        </tr>
+        <tr>
+            <td class="term">entities</td>
+            <td class="term">コマンド</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.entities</td>
+        </tr>
+        <tr>
+            <td class="term">valueobjects</td>
+            <td class="term">値オブジェクト</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">パッケージ</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects</td>
+        </tr>
+        <tr>
             <td class="term">CargoBookingCommandService</td>
             <td class="term">Application Service class for the Cargo Booking Command</td>
             <td class="markdown javadoc"></td>
@@ -56,50 +154,106 @@
         </tr>
         <tr>
             <td class="term">BookingId</td>
-            <td class="term">Aggregate Identifier for the Cargo Aggregate</td>
-            <td class="markdown javadoc"></td>
+            <td class="term">予約ID</td>
+            <td class="markdown javadoc">貨物集約のための集約ID</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates.BookingId</td>
         </tr>
         <tr>
+            <td class="term">Cargo</td>
+            <td class="term">貨物</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.aggregates.Cargo</td>
+        </tr>
+        <tr>
             <td class="term">BookCargoCommand</td>
-            <td class="term">Book Cargo Command class</td>
+            <td class="term">貨物予約</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.commands.BookCargoCommand</td>
         </tr>
         <tr>
             <td class="term">RouteCargoCommand</td>
-            <td class="term">Command Class to assign a route to a booked cargo</td>
+            <td class="term">貨物経路</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.commands.RouteCargoCommand</td>
         </tr>
         <tr>
             <td class="term">Location</td>
-            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
-            <td class="markdown javadoc"></td>
+            <td class="term">位置</td>
+            <td class="markdown javadoc">5桁のUNロケーションコードで表される</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.entities.Location</td>
         </tr>
         <tr>
             <td class="term">BookingAmount</td>
-            <td class="term">Domain model representation of the Booking Amount for a new Cargo.</td>
-            <td class="markdown javadoc">Contains the Booking Amount of the Cargo</td>
+            <td class="term">予約数量</td>
+            <td class="markdown javadoc">ドメインモデルで新しい貨物の予約数量を表す</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.BookingAmount</td>
         </tr>
         <tr>
             <td class="term">CargoHandlingActivity</td>
-            <td class="term">A handling activity represents how and where a cargo can be handled, and can</td>
-            <td class="markdown javadoc">be used to express predictions about what is expected to happen to a cargo in
-the future.</td>
+            <td class="term">荷役</td>
+            <td class="markdown javadoc">取り扱い活動は、貨物がどのように、そしてどこで扱われるかを表し、貨物に
+将来何が起こると予想されるかを表現するために使用することができます。</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoHandlingActivity</td>
         </tr>
         <tr>
+            <td class="term">CargoItinerary</td>
+            <td class="term">貨物旅程</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.CargoItinerary</td>
+        </tr>
+        <tr>
+            <td class="term">Delivery</td>
+            <td class="term">配送</td>
+            <td class="markdown javadoc">ルート仕様／旅程および取り扱いイベントに対して貨物の進捗を追跡するドメインクラス。</td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Delivery</td>
+        </tr>
+        <tr>
+            <td class="term">LastCargoHandledEvent</td>
+            <td class="term">最終荷役イベント</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.LastCargoHandledEvent</td>
+        </tr>
+        <tr>
+            <td class="term">Leg</td>
+            <td class="term">旅程</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Leg</td>
+        </tr>
+        <tr>
+            <td class="term">RouteSpecification</td>
+            <td class="term">貨物のルート仕様</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.RouteSpecification</td>
+        </tr>
+        <tr>
+            <td class="term">RoutingStatus</td>
+            <td class="term">経路ステータス</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.RoutingStatus</td>
+        </tr>
+        <tr>
+            <td class="term">TransportStatus</td>
+            <td class="term">輸送ステータス</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.TransportStatus</td>
+        </tr>
+        <tr>
             <td class="term">Voyage</td>
-            <td class="term"> Class representing the Cargo Voyage</td>
+            <td class="term">航海</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.booking.domain.model.valueobjects.Voyage</td>
@@ -148,31 +302,52 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">HandlingActivity</td>
-            <td class="term">Root Aggregate for the Handling Bounded Context</td>
-            <td class="markdown javadoc"></td>
+            <td class="term">荷役</td>
+            <td class="markdown javadoc">ルート仕様／旅程および取り扱いイベントに対して貨物の進捗を追跡するドメインクラス。</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.aggregates.HandlingActivity</td>
         </tr>
         <tr>
             <td class="term">HandlingActivityRegistrationCommand</td>
-            <td class="term">Command to Register an Handling Activity</td>
+            <td class="term">荷役登録</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.commands.HandlingActivityRegistrationCommand</td>
         </tr>
         <tr>
+            <td class="term">CargoBookingId</td>
+            <td class="term">貨物予約ID</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.CargoBookingId</td>
+        </tr>
+        <tr>
+            <td class="term">HandlingActivityHistory</td>
+            <td class="term">荷役履歴</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.HandlingActivityHistory</td>
+        </tr>
+        <tr>
             <td class="term">Location</td>
-            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
+            <td class="term">位置</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Location</td>
         </tr>
         <tr>
             <td class="term">Type</td>
-            <td class="term">Handling event type. Either requires or prohibits a carrier movement</td>
-            <td class="markdown javadoc">association, it's never optional.</td>
+            <td class="term">荷役タイプ</td>
+            <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.Type</td>
+        </tr>
+        <tr>
+            <td class="term">VoyageNumber</td>
+            <td class="term">航海番号</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.handling.domain.model.valueobjects.VoyageNumber</td>
         </tr>
         <tr>
             <td class="term">CargoHandlingController</td>
@@ -196,18 +371,39 @@ the future.</td>
             <td class="identifier">com.practicalddd.cargotracker.routing.application.internal.queryservices.CargoRoutingQueryService</td>
         </tr>
         <tr>
+            <td class="term">Voyage</td>
+            <td class="term">航海</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.aggregates.Voyage</td>
+        </tr>
+        <tr>
+            <td class="term">CarrierMovement</td>
+            <td class="term">移動機器</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.entities.CarrierMovement</td>
+        </tr>
+        <tr>
             <td class="term">Location</td>
-            <td class="term">Location class represented by a unique 5-diigit UN Location code.</td>
+            <td class="term">位置</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Location</td>
         </tr>
         <tr>
             <td class="term">Schedule</td>
-            <td class="term">A Voyage schedule</td>
+            <td class="term">航海予定</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects.Schedule</td>
+        </tr>
+        <tr>
+            <td class="term">VoyageNumber</td>
+            <td class="term">航海番号</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.routing.domain.model.valueobjects.VoyageNumber</td>
         </tr>
         <tr>
             <td class="term">VoyageRepository</td>
@@ -232,10 +428,17 @@ the future.</td>
         </tr>
         <tr>
             <td class="term">TransitEdge</td>
-            <td class="term">Represents an edge in a path through a graph, describing the route of a</td>
-            <td class="markdown javadoc">cargo.</td>
+            <td class="term">貨物ルート</td>
+            <td class="markdown javadoc">グラフを通る経路内のエッジを表し、貨物のルートを記述します。</td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.shareddomain.model.TransitEdge</td>
+        </tr>
+        <tr>
+            <td class="term">TransitPath</td>
+            <td class="term">貨物ルートパス</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.shareddomain.model.TransitPath</td>
         </tr>
         <tr>
             <td class="term">AssignTrackingIdCommandService</td>
@@ -245,39 +448,74 @@ the future.</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.application.internal.commandservices.AssignTrackingIdCommandService</td>
         </tr>
         <tr>
+            <td class="term">TrackingActivity</td>
+            <td class="term">追跡</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingActivity</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingNumber</td>
+            <td class="term">追跡番号</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.aggregates.TrackingNumber</td>
+        </tr>
+        <tr>
             <td class="term">AddTrackingEventCommand</td>
-            <td class="term">Add Tracking Event Command</td>
+            <td class="term">追跡追加</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.commands.AddTrackingEventCommand</td>
         </tr>
         <tr>
             <td class="term">AssignTrackingNumberCommand</td>
-            <td class="term">Assign Tracking Number Command class</td>
+            <td class="term">追跡番号割り当て</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.commands.AssignTrackingNumberCommand</td>
         </tr>
         <tr>
+            <td class="term">TrackingActivityEvent</td>
+            <td class="term">追跡イベント</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingActivityEvent</td>
+        </tr>
+        <tr>
             <td class="term">TrackingBookingId</td>
-            <td class="term">Aggregate Identifier for the Cargo Aggregate</td>
+            <td class="term">予約追跡ID</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.entities.TrackingBookingId</td>
         </tr>
         <tr>
             <td class="term">TrackingEvent</td>
-            <td class="term">Tracking Event Details</td>
+            <td class="term">追跡イベント詳細</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEvent</td>
         </tr>
         <tr>
+            <td class="term">TrackingEventType</td>
+            <td class="term">追跡イベントタイプ</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingEventType</td>
+        </tr>
+        <tr>
             <td class="term">TrackingLocation</td>
-            <td class="term">TrackingLocation class represented by a unique 5-diigit UN TrackingLocation code.</td>
+            <td class="term">追跡位置</td>
             <td class="markdown javadoc"></td>
             <td class="kind">クラス</td>
             <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingLocation</td>
+        </tr>
+        <tr>
+            <td class="term">TrackingVoyageNumber</td>
+            <td class="term">追跡航海番号</td>
+            <td class="markdown javadoc"></td>
+            <td class="kind">クラス</td>
+            <td class="identifier">com.practicalddd.cargotracker.tracking.domain.model.valueobjects.TrackingVoyageNumber</td>
         </tr>
         <tr>
             <td class="term">TrackingRepository</td>
