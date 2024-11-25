@@ -32,7 +32,7 @@ const jig = {
 }
 
 exports.jigBuildTasks = () => {
-    return series(jig.clean, jig.build, jig.runJigCli, jig.copy);
+    return series(jig.clean, jig.build, jig.copy);
 }
 
 exports.jigCopyTasks = () => {
