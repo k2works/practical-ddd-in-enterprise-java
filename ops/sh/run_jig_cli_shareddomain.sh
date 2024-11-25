@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # JARファイルのパス設定
-jarPath="./jig-cli.jar"
+jarPath="./ops/jig-cli.jar"
 # 出力ディレクトリ
 jig_output_directory="./docs/jig/shareddomain"
 # 検索パターンの設定
