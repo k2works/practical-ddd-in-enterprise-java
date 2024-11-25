@@ -236,8 +236,10 @@ dist
 .pnp.*
 
 .idea
-ops/docker/schemaspy/
 public
 .DS_Store
 target/
 !ops/jig-cli.jar
+ops/docker/schemaspy/output
+ops/docker/mssql/data
+ops/docker/mssql/log
